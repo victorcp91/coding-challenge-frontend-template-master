@@ -1,4 +1,5 @@
 import { Box, TextInput } from "grommet";
+import Head from 'next/head';
 import React, { useEffect, useState, useMemo } from "react";
 import UserCard from "../components/user.card";
 import Loading from '../components/loading';
@@ -44,20 +45,25 @@ const Main: React.FC<Props> = ({}) => {
 
 
   return (
-    <Box direction="column" pad="medium" height="100%" overflow="auto">
-      <TextInput placeholder="type here" value={studentQuery} onChange={onChangeHandler}/>
-      {loading ? (
-        <Loading/> 
-      ): (
-        <Box direction="row" wrap={true}>
-          {!!filteredStudents.length ? filteredStudents.map((s) => (
-            <Box key={s.id} margin="10px">
-              <UserCard user={s} />
-            </Box>
-          )): emptyStudentsMessage}
-        </Box>
-      )}
-    </Box>
+    <>
+      <Head>
+        <title>NGT.ACADEMY</title>
+      </Head>
+      <Box direction="column" pad="medium" height="100%" overflow="auto">
+        <TextInput placeholder="type here" value={studentQuery} onChange={onChangeHandler}/>
+        {loading ? (
+          <Loading/> 
+        ): (
+          <Box direction="row" wrap={true}>
+            {!!filteredStudents.length ? filteredStudents.map((s) => (
+              <Box key={s.id} margin="10px">
+                <UserCard user={s} />
+              </Box>
+            )): emptyStudentsMessage}
+          </Box>
+        )}
+      </Box>
+    </>
   );
 };
 
