@@ -1,0 +1,27 @@
+.studentPage{
+	margin: 0 20px 20px;
+	width: fit-content;
+}
+
+.studentPage img{
+	width: 50px;
+	margin:20px 0 15px;
+}
+
+.studentPage h3{
+	margin: 0;
+}
+
+.studentPage p{
+	margin: 0;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.studentPage hr{
+	margin: 5px 0 10px;
+}
+
+.studentPage a{
+	text-decoration: underline;
+}

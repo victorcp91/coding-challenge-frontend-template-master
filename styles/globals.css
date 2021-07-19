@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+button{
+  width: fit-content;
+}
+
 * {
   box-sizing: border-box;
 }
