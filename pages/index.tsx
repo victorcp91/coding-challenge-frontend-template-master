@@ -1,12 +1,14 @@
 import { Box, TextInput } from "grommet";
 import React, { useEffect, useState, useMemo } from "react";
 import UserCard from "../components/user.card";
+import Loading from '../components/loading';
 import { fetchStudents, Student } from "../services/students";
 
 type Props = {};
 
 const Main: React.FC<Props> = ({}) => {
 
+  const [loading, setLoading] = useState<boolean>(true);
   const [loadingError, setLoadingError] = useState<boolean>(false);
   const [studentQuery, setStudentQuery] = useState<string>('');
   const [students, setStudents] = useState<Student[]>([]);
@@ -20,6 +22,8 @@ const Main: React.FC<Props> = ({}) => {
       setStudents(res);
     }).catch(() => {
       setLoadingError(true);
+    }).finally(() => {
+      setLoading(false);
     });
   }, []);
 
@@ -42,13 +46,17 @@ const Main: React.FC<Props> = ({}) => {
   return (
     <Box direction="column" pad="medium" height="100%" overflow="auto">
       <TextInput placeholder="type here" value={studentQuery} onChange={onChangeHandler}/>
-      <Box direction="row" wrap={true}>
-      {!!filteredStudents.length ? filteredStudents.map((s) => (
-        <Box key={s.id} margin="10px">
-          <UserCard user={s} />
+      {loading ? (
+        <Loading/> 
+      ): (
+        <Box direction="row" wrap={true}>
+          {!!filteredStudents.length ? filteredStudents.map((s) => (
+            <Box key={s.id} margin="10px">
+              <UserCard user={s} />
+            </Box>
+          )): emptyStudentsMessage}
         </Box>
-      )): emptyStudentsMessage}
-      </Box>
+      )}
     </Box>
   );
 };
