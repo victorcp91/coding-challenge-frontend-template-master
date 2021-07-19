@@ -11,7 +11,7 @@
 Create a new branch "survey".
 Please open a pull request to the default branch with your answer to the following questions.
 
-* [ ] I have read the job description and understand the qualifications, the responsibilities and the compensation of this position.
+* [X] I have read the job description and understand the qualifications, the responsibilities and the compensation of this position.
 1. What are you most proud of as a front-end developer?
 1. What do you enjoy most working as a front-end developer?
 1. What is your favorite software development principle(s) and/or design pattern(s)?
