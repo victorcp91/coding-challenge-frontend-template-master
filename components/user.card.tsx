@@ -12,16 +12,14 @@ const UserCard: React.FC<Props> = ({ user }) => {
   const router = useRouter();
 
   return (
-  <button onClick={() => router.push(`student/${user.id}`)}>
-    <Card height="small" width="small">
-      <CardBody align="center" pad="medium">
-        <Avatar src={user.avatar} />
-      </CardBody>
-      <CardFooter align="start" justify="center" pad="medium">
-        <Text textAlign="center">{`${user["first_name"]} ${user["last_name"]}`}</Text>
-      </CardFooter>
-    </Card>
-  </button>
+  <Card height="small" width="small" onClick={() => router.push(`student/${user.id}`)}>
+    <CardBody align="center" pad="medium">
+      <Avatar src={user.avatar} />
+    </CardBody>
+    <CardFooter align="start" justify="center" pad="medium">
+      <Text color="text" textAlign="center">{`${user["first_name"]} ${user["last_name"]}`}</Text>
+    </CardFooter>
+  </Card>
 )};
 
 export default UserCard;

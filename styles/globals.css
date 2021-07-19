@@ -12,10 +12,7 @@ a {
 }
 
 button{
-  border: none;
-  background: none;
   width: fit-content;
-  cursor: pointer;
 }
 
 * {
