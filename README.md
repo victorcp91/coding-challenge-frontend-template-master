@@ -13,10 +13,24 @@ Please open a pull request to the default branch with your answer to the followi
 
 * [X] I have read the job description and understand the qualifications, the responsibilities and the compensation of this position.
 1. What are you most proud of as a front-end developer?
+    My ability to solve problems and face new challenges.
+
 1. What do you enjoy most working as a front-end developer?
+    Develop a very enjoyable systems and interfaces for users.
+
 1. What is your favorite software development principle(s) and/or design pattern(s)?
+    The strategy design pattern as we use in Typescript, preventing wrong types of inputs and outputs and unexpected behaviors.
+
 1. What is the top 1 (or up to 3) accomplishments you achieved in your previous company?
+    - A complex print management system for a big company involving different user role logins, prints customizations and 
+    presentation generator for end customers.
+    - Online radio site and app in React and React Native that plays songs, interviews and podcasts and save lists of favorites for logged users.
+    - A interactive museum screen interface with Javascript and a local Node.js server for multi screen communication. This project can be visited in 'Museu do Amanhã', Rio de Janeiro - Brazil
+
 1. How do you like TDD?
+    I think the idea of ​​using TDD is fantastic and I can't wait to apply it to projects outside my studies and personal projects.
+    Unfortunately in my current job we have to deal with a lot of projects at the same time and this good practice was not implemented.
+    
 
 ## Coding challenge
 
